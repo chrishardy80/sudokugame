@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sudoku</title>
+    <link href="./resources/reset.css" type="text/css" rel="stylesheet">
+    <link href="./resources/style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./javascript/main.js"></script>
+  </head>
+  <body>
+    <div id="maincontent">
+
+      <div id="board">
+
+        <div class="section0">
+
+          <div class="row row0">
+
+            <div class="column column00"></div>
+            <div class="column column01"></div>
+            <div class="column column02"></div>
+            <div class="column column10"></div>
+            <div class="column column11"></div>
+            <div class="column column12"></div>
+            <div class="column column20"></div>
+            <div class="column column21"></div>
+            <div class="column column22"></div>
+
+          </div>
+
+          <div class="row row1">
+
+            <div class="column column00"></div>
+            <div class="column column01"></div>
+            <div class="column column02"></div>
+            <div class="column column10"></div>
+            <div class="column column11"></div>
+            <div class="column column12"></div>
+            <div class="column column20"></div>
+            <div class="column column21"></div>
+            <div class="column column22"></div>
+
+          </div>
+
+          <div class="row row2">
+
+            <div class="column column00"></div>
+            <div class="column column01"></div>
+            <div class="column column02"></div>
+            <div class="column column10"></div>
+            <div class="column column11"></div>
+            <div class="column column12"></div>
+            <div class="column column20"></div>
+            <div class="column column21"></div>
+            <div class="column column22"></div>
+
+          </div>
+
+        </div>
+
+        <div class="section1">
+
+          <div class="row row0">
+
+            <div class="column column00"></div>
+            <div class="column column01"></div>
+            <div class="column column02"></div>
+            <div class="column column10"></div>
+            <div class="column column11"></div>
+            <div class="column column12"></div>
+            <div class="column column20"></div>
+            <div class="column column21"></div>
+            <div class="column column22"></div>
+
+          </div>
+
+          <div class="row row1">
+
+            <div class="column column00"></div>
+            <div class="column column01"></div>
+            <div class="column column02"></div>
+            <div class="column column10"></div>
+            <div class="column column11"></div>
+            <div class="column column12"></div>
+            <div class="column column20"></div>
+            <div class="column column21"></div>
+            <div class="column column22"></div>
+
+          </div>
+
+          <div class="row row2">
+
+            <div class="column column00"></div>
+            <div class="column column01"></div>
+            <div class="column column02"></div>
+            <div class="column column10"></div>
+            <div class="column column11"></div>
+            <div class="column column12"></div>
+            <div class="column column20"></div>
+            <div class="column column21"></div>
+            <div class="column column22"></div>
+
+          </div>
+
+        </div>
+
+        <div class="section2">
+
+          <div class="row row0">
+
+            <div class="column column00"></div>
+            <div class="column column01"></div>
+            <div class="column column02"></div>
+            <div class="column column10"></div>
+            <div class="column column11"></div>
+            <div class="column column12"></div>
+            <div class="column column20"></div>
+            <div class="column column21"></div>
+            <div class="column column22"></div>
+
+          </div>
+
+          <div class="row row1">
+
+            <div class="column column00"></div>
+            <div class="column column01"></div>
+            <div class="column column02"></div>
+            <div class="column column10"></div>
+            <div class="column column11"></div>
+            <div class="column column12"></div>
+            <div class="column column20"></div>
+            <div class="column column21"></div>
+            <div class="column column22"></div>
+
+          </div>
+
+          <div class="row row2">
+
+            <div class="column column00"></div>
+            <div class="column column01"></div>
+            <div class="column column02"></div>
+            <div class="column column10"></div>
+            <div class="column column11"></div>
+            <div class="column column12"></div>
+            <div class="column column20"></div>
+            <div class="column column21"></div>
+            <div class="column column22"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="controlpanel">
+
+        <header>Sudoku</header>
+
+        <div class="timer">
+          <div class="display">
+            <span class="time">00:00:00</span>
+          </div>
+        </div>
+
+          <div class="clickable">
+
+        <div class="buttons">
+
+
+
+          <div class="row one">
+
+            <div id="newgame" class="button control">
+              <div class="buttonshadow">
+                <span>New Game</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row two">
+
+            <div id="reset" class="button control">
+              <div class="buttonshadow">
+                <span>Reset</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row three">
+
+            <div id="pause" class="button control">
+              <div class="buttonshadow">
+                <span>Pause</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row four">
+
+            <div id="submit" class="button control">
+              <div class="buttonshadow">
+                <span>Submit</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="controls">
+
+          <div id="answer">
+
+            <div class="row one">
+
+              <div id="answerone" class="button control" value="1">
+                <div class="buttonshadow">
+                  <span>1</span>
+                </div>
+              </div>
+
+              <div id="answertwo" class="button control" value="2">
+                <div class="buttonshadow">
+                  <span>2</span>
+                </div>
+              </div>
+
+              <div id="answerthree" class="button control" value="3">
+                <div class="buttonshadow">
+                  <span>3</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row two">
+
+              <div id="answerfour" class="button control" value="4">
+                <div class="buttonshadow">
+                  <span>4</span>
+                </div>
+              </div>
+
+              <div id="answerfive" class="button control" value="5">
+                <div class="buttonshadow">
+                  <span>5</span>
+                </div>
+              </div>
+
+              <div id="answersix" class="button control" value="6">
+                <div class="buttonshadow">
+                  <span>6</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row three">
+
+              <div id="answerseven" class="button control" value="7">
+                <div class="buttonshadow">
+                  <span>7</span>
+                </div>
+              </div>
+
+              <div id="answereight" class="button control" value="8">
+                <div class="buttonshadow">
+                  <span>8</span>
+                </div>
+              </div>
+
+              <div id="answernine" class="button control" value="9">
+                <div class="buttonshadow">
+                  <span>9</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div id="delete" class="button control">
+            <div class="buttonshadow">
+              <span>Delete</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
