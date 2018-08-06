@@ -476,6 +476,15 @@ puzzleBoardSquareDown =[ [ [['', '', ''], ['', '', ''], ['', '', '']],
                         [['', '', ''], ['', '', ''], ['', '', '']],
                         [['', '', ''], ['', '', ''], ['', '', '']]  ] ];
 
+puzzleBoardSolve = [ [ [['', '', ''], ['', '', ''], ['', '', '']],
+                          [['', '', ''], ['', '', ''], ['', '', '']],
+                          [['', '', ''], ['', '', ''], ['', '', '']]  ],
+                        [ [['', '', ''], ['', '', ''], ['', '', '']],
+                          [['', '', ''], ['', '', ''], ['', '', '']],
+                          [['', '', ''], ['', '', ''], ['', '', '']]  ],
+                        [ [['', '', ''], ['', '', ''], ['', '', '']],
+                          [['', '', ''], ['', '', ''], ['', '', '']],
+                          [['', '', ''], ['', '', ''], ['', '', '']]  ] ];
 
   solutionBoard = [];
   numberFix = 1;
@@ -488,7 +497,6 @@ createBoardThree(boardThree);
 };
 
 function solve() {
-
 let p = 0;
 let guardian = [500];
 while (guardian[p] !== guardian[p-1]) {
@@ -562,9 +570,6 @@ p++;
 
                               if (puzzleBoardSolve[p][q][r][s] == 0) {
                                 while(signal < 1) {
-
-
-                                console.log(patternCorrector + ': ' + p + q + r + s + ' ' + puzzleBoard[p][q][r] + ' but we changed it anyway');
                                 puzzleBoard[p][q][r][s] = completeBoard[p][q][r][s];
                                 puzzleBoardDown[r][s][p][q] = completeBoard[p][q][r][s];
                                 puzzleBoardSquare[p][r][q][s] = completeBoard[p][q][r][s];
@@ -662,11 +667,9 @@ function check() {
       }
     }
   }
-  console.log(checkBoard);
   test = document.getElementById("board");
   testContent = (test.textContent);
   testExtract = testContent.match(/\d+/g).map(Number);
-  console.log(testExtract);
 };
 
 fullBoard();
@@ -691,12 +694,14 @@ $('#delete').click(function() {
 });
 
 $('#newgame').click(function() {
-  minutes = 0;
-  seconds = 0;
-  tens = 0;
+
   fullBoard();
   solve();
   build();
+  minutes = 0;
+  seconds = 0;
+  tens = 0;
+
 });
 
 $('#reset').click(function() {
@@ -714,6 +719,13 @@ $('#submit').click(function() {
   check();
   if (checkBoard.join() == testExtract.join()) {
     alert('Well Done!! You completed the puzzle in ' + ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2) + ':' + ('0' + tens).slice(-2) + ' !!');
+    minutes = 0;
+    seconds = 0;
+    tens = 0;
+    fullBoard();
+    solve();
+    build();
+
   }
   else {
     alert('Keep going! You\'re not there yet!');
