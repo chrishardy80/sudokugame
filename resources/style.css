@@ -144,11 +144,13 @@ header {
   .clickable{
     justify-content: space-around;
   }
+
+  .controls {
+    display: flex;
+  }
 }
 
-.controls {
-  display: flex;
-}
+
 
 .buttons {
   display: flex;
