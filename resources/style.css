@@ -39,7 +39,7 @@ body {
   }
 
   #mobile header {
-    font-size: 6.48em;
+    font-size: 5.2em;
     align-items: center;
     margin: 0 20px 0 20px;
   }
@@ -71,7 +71,7 @@ body {
 
 @media only screen and (max-width: 980px) {
   #board {
-    width: 54em;
+    width: 48em;
     height: 100%;
     margin: 20px 0;
   }
@@ -92,8 +92,8 @@ body {
 
 @media only screen and (max-width: 980px) {
   #board .column {
-    width: 3em;
-    height: 3em;
+    width: 2.6em;
+    height: 2.6em;
     font-size: 2em;
   }
 }
@@ -182,8 +182,8 @@ header {
 
 @media only screen and (max-width: 980px) {
   .button {
-    width: 95px;
-    height: 85px;
+    width: 80px;
+    height: 75px;
     font-size: 30px;
     border-radius: 8px;
     box-shadow: 4px 6px 6px #666768;
@@ -192,8 +192,9 @@ header {
   }
 
   #delete {
-    width: 130px !important;
-    height: 295px;
+    width: 90px !important;
+    height: 263px;
+    font-size: 1.3em;
   }
 }
 
@@ -250,8 +251,8 @@ column:focus {
 
 @media only screen and (max-width: 980px) {
   .buttons .button {
-    width: 320px;
-    height: 55px;
+    width: 300px;
+    height: 49px;
   }
 }
 
